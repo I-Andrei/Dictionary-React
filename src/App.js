@@ -8,8 +8,8 @@ function App() {
           Write word:
         </p>
       </header>
-      <div id="root">
-      </div>
+      <div id="root"></div>
+      <div id="MyID"></div>
     </div>
   );
 }
