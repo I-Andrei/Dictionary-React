@@ -3,42 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-const newWord = ''
-const inputWord = (
-  <div>
-    <label>Write Word:</label>
-    <input type="text" id="newWord" value={newWord.value} required minLength="4" maxLength="30" size="30" placeholder="Lower case, all one word"></input>
-    <button type="button" onClick={inputNewWord}> Insert Word </button>
-  </div>
-);
-const x = ['New words:']
-
-function inputNewWord() {
-  const i = x.indexOf(document.getElementById("newWord").value)
-	if(i >= 0)
-    return root.render("The word is already in the dictionary") 
-  else if (i < 0) {
-    x.push(document.getElementById("newWord").value)
-    x.push(", ")
-    return root.render(
-    <div>
-    <div>{inputWord}</div>
-    <div><li>{x}</li></div>  
-    <div>The word was inserted</div>
-    </div>)
-  }
-  return root.render(<div>x</div>)
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render( 
-  inputWord, 
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
