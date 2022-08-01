@@ -4,6 +4,7 @@ import InsertWord from './components/Insert_component';
 import SearchWord from './components/Search_component';
 
 function App() {
+  
   const [words, setWords] = useState(["New Word: "])
   
   function exportWords () {

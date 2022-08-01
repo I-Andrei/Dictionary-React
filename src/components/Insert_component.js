@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 let alert = ""
 
 function InsertWord(props) {
+  
     const [input_word, setInput_word] = useState("")
 
     function typedWord(event) {

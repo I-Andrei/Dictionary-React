@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 let alert = ""
 
 function SearchWord(props) {
+
     const [search, setSearch] = useState("");
     
     function typedWord(event) {
@@ -17,7 +18,6 @@ function SearchWord(props) {
             alert = "The word already exists!"
             setSearch("")
         }
-        
     }
 
     return (
