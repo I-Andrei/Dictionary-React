@@ -3,20 +3,23 @@ import React from 'react';
 import InsertWord from './components/Insert_component';
 import SearchWord from './components/Search_component';
 
-let words = ["New Word: ", "Andrei", "Victor"]
+let words = ["New Word: "]
 
-function App() {
-  
-  function InsertNewWord() {
-    console.log("words: " + words)
+function App(props) {
+
+  function exportWords () {
     return words
+  }
+  
+  function InsertNewWord (wordFromInsertComp) {
+    words.push(wordFromInsertComp)
+    console.log("words: " + words)
   }
 
   return (
     <div className="App">
-      <div></div>
-      <div ><InsertWord insertWord={InsertNewWord()} /></div>
-      <div ><SearchWord searchWord={InsertNewWord()} /></div>
+      <div ><InsertWord insertWord={exportWords()} importFromInsertComp={InsertNewWord} /></div>
+      <div ><SearchWord searchWord={exportWords()} /></div>
       </div>
   );
 }

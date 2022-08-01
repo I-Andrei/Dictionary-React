@@ -16,6 +16,7 @@ function SearchWord(props) {
             alert = "The word already exists!"
             setSearch("")
         }
+        
     }
 
     return (

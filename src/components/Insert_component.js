@@ -10,14 +10,14 @@ function InsertWord(props) {
     }
 
     function ButtonClicked() {
-        if(props.insertWord.indexOf(insert) === -1){
-            alert = "You inserted the word in the dictionary!"
-            props.insertWord.push(insert)
-            setInsert("")
-        } else {
-            alert = "The word already exists!"
-            setInsert("")
-        }
+      if(props.insertWord.indexOf(insert) === -1){
+        alert = "You inserted the word in the dictionary!"
+        props.importFromInsertComp(insert)
+        setInsert("")
+      } else {
+        alert = "The word already exists!"
+        setInsert("") 
+      }
     }
 
     return (
