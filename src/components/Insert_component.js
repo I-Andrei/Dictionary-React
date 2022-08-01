@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 let alert = ""
 
 function InsertWord(props) {
-    const [insert, setInsert] = useState("New Words: ")
+    const [insert, setInsert] = useState("")
 
     function typedWord(event) {
       setInsert(event.target.value)
@@ -13,11 +13,9 @@ function InsertWord(props) {
       if(props.insertWord.indexOf(insert) === -1){
         alert = "You inserted the word in the dictionary!"
         props.importFromInsertComp(insert)
-        setInsert("")
-      } else {
+      } else
         alert = "The word already exists!"
-        setInsert("") 
-      }
+      setInsert("")
     }
 
     return (

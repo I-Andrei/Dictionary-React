@@ -1,19 +1,19 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import InsertWord from './components/Insert_component';
 import SearchWord from './components/Search_component';
 
-let words = ["New Word: "]
-
-function App(props) {
-
+function App() {
+  const [words, setWords] = useState(["New Word: "])
+  
   function exportWords () {
     return words
   }
   
   function InsertNewWord (wordFromInsertComp) {
-    words.push(wordFromInsertComp)
-    console.log("words: " + words)
+    let words_copy = words
+    words_copy.push(wordFromInsertComp)
+    setWords(words_copy)
   }
 
   return (
