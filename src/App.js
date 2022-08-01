@@ -11,14 +11,14 @@ function App() {
   }
   
   function InsertNewWord (wordFromInsertComp) {
-    let words_copy = words
-    words_copy.push(wordFromInsertComp)
-    setWords(words_copy)
+    let arrayOfWords_copy = words
+    arrayOfWords_copy.push(wordFromInsertComp)
+    setWords(arrayOfWords_copy)
   }
 
   return (
     <div className="App">
-      <div ><InsertWord insertWord={exportWords()} importFromInsertComp={InsertNewWord} /></div>
+      <div ><InsertWord insertWord={exportWords()} addWord={InsertNewWord} /></div>
       <div ><SearchWord searchWord={exportWords()} /></div>
       </div>
   );
